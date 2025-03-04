@@ -1,0 +1,309 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0cd611a7-1827-4ece-a751-875631d9a4f7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>HeartDiseaseSourceView</ID>
+  <Name>HeartDiseaseSourceView</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>HeartDisease</DataSourceID>
+  <Schema>
+    <xs:schema id="HeartDiseaseSourceView" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="HeartDiseaseSourceView" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="d564ff77-cff1-40a1-95b2-847e9bffd053">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_HeartDisease2022" msprop:design-time-name="67e16b74-daac-4ca7-8f4f-a919fb12e82f" msprop:DbTableName="HeartDisease2022" msprop:FriendlyName="HeartDisease2022" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="State" msprop:design-time-name="6b95508a-722f-495b-aebb-74fb71bf59a0" msprop:DbColumnName="State" msprop:FriendlyName="State">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sex" msprop:design-time-name="cc70d565-f6b0-4c34-9c45-502cef34170e" msprop:DbColumnName="Sex" msprop:FriendlyName="Sex">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GeneralHealth" msprop:design-time-name="b0d47539-0c70-4b59-9e20-0154f27cbfcd" msprop:DbColumnName="GeneralHealth" msprop:FriendlyName="GeneralHealth">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PhysicalHealthDays" msprop:design-time-name="e401146a-36a6-42c5-86a0-a3dd506e535c" msprop:DbColumnName="PhysicalHealthDays" msprop:FriendlyName="PhysicalHealthDays" type="xs:double" />
+                  <xs:element name="MentalHealthDays" msprop:design-time-name="d94f2722-5391-4b80-9cd4-208b7fcf42ab" msprop:DbColumnName="MentalHealthDays" msprop:FriendlyName="MentalHealthDays" type="xs:double" />
+                  <xs:element name="LastCheckupTime" msprop:design-time-name="3f98b6e4-8855-4d9c-9281-eab8e435166f" msprop:DbColumnName="LastCheckupTime" msprop:FriendlyName="LastCheckupTime">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PhysicalActivities" msprop:design-time-name="2d30710a-4e8f-4f13-84ec-376bb987323a" msprop:DbColumnName="PhysicalActivities" msprop:FriendlyName="PhysicalActivities">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SleepHours" msprop:design-time-name="8daf1a19-ed5f-4249-89fd-db38060d8c56" msprop:DbColumnName="SleepHours" msprop:FriendlyName="SleepHours" type="xs:double" />
+                  <xs:element name="RemovedTeeth" msprop:design-time-name="9d90e4a3-f287-4dd8-b28e-faf3a1367558" msprop:DbColumnName="RemovedTeeth" msprop:FriendlyName="RemovedTeeth">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadHeartAttack" msprop:design-time-name="90f787b6-2e14-45e5-b5af-6f34db857748" msprop:DbColumnName="HadHeartAttack" msprop:FriendlyName="HadHeartAttack">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadAngina" msprop:design-time-name="034663f1-1cca-41fa-9056-3d52ae79dfb8" msprop:DbColumnName="HadAngina" msprop:FriendlyName="HadAngina">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadStroke" msprop:design-time-name="ebbbccd3-c459-40c5-9bd1-af732dcba01c" msprop:DbColumnName="HadStroke" msprop:FriendlyName="HadStroke">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadAsthma" msprop:design-time-name="c1f1101c-712f-48ae-83c9-9351dc68c069" msprop:DbColumnName="HadAsthma" msprop:FriendlyName="HadAsthma">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadSkinCancer" msprop:design-time-name="0ff38afb-0130-4165-89ed-151379c047dc" msprop:DbColumnName="HadSkinCancer" msprop:FriendlyName="HadSkinCancer">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadCOPD" msprop:design-time-name="f941f77b-d965-4c23-8e9b-424ed42f58ac" msprop:DbColumnName="HadCOPD" msprop:FriendlyName="HadCOPD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadDepressiveDisorder" msprop:design-time-name="4bd23712-fd46-4558-8da1-f9df7c41fa89" msprop:DbColumnName="HadDepressiveDisorder" msprop:FriendlyName="HadDepressiveDisorder">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadKidneyDisease" msprop:design-time-name="5db6b35a-3823-4b45-8ee6-322e79c7a21d" msprop:DbColumnName="HadKidneyDisease" msprop:FriendlyName="HadKidneyDisease">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadArthritis" msprop:design-time-name="aba1619a-1b6a-4417-a4fd-6f26af3bb9de" msprop:DbColumnName="HadArthritis" msprop:FriendlyName="HadArthritis">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HadDiabetes" msprop:design-time-name="63b1bee4-581c-49c6-a81d-acf13d38b903" msprop:DbColumnName="HadDiabetes" msprop:FriendlyName="HadDiabetes">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DeafOrHardOfHearing" msprop:design-time-name="3d5c997d-4bbb-4df8-9df5-199187aef429" msprop:DbColumnName="DeafOrHardOfHearing" msprop:FriendlyName="DeafOrHardOfHearing">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BlindOrVisionDifficulty" msprop:design-time-name="15261909-4eb6-4a94-b3f1-c3d263e40d5f" msprop:DbColumnName="BlindOrVisionDifficulty" msprop:FriendlyName="BlindOrVisionDifficulty">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DifficultyConcentrating" msprop:design-time-name="ca03c163-3fae-4bb8-9fa9-7bf09a332d4a" msprop:DbColumnName="DifficultyConcentrating" msprop:FriendlyName="DifficultyConcentrating">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DifficultyWalking" msprop:design-time-name="814d298a-88c2-40e3-9158-4ea81d01c8e8" msprop:DbColumnName="DifficultyWalking" msprop:FriendlyName="DifficultyWalking">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DifficultyDressingBathing" msprop:design-time-name="399edf4d-641a-4d1c-b5c4-adf59dcb28ca" msprop:DbColumnName="DifficultyDressingBathing" msprop:FriendlyName="DifficultyDressingBathing">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DifficultyErrands" msprop:design-time-name="61974d3c-7b17-4d40-9f95-f808e1c8460d" msprop:DbColumnName="DifficultyErrands" msprop:FriendlyName="DifficultyErrands">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SmokerStatus" msprop:design-time-name="2e7cdefb-2ac3-4261-ae1d-ad70678d39bf" msprop:DbColumnName="SmokerStatus" msprop:FriendlyName="SmokerStatus">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ECigaretteUsage" msprop:design-time-name="913b07fb-dfec-430a-b511-3f4324f7d18a" msprop:DbColumnName="ECigaretteUsage" msprop:FriendlyName="ECigaretteUsage">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ChestScan" msprop:design-time-name="11284b05-f50c-455e-b0bd-d6b5a894f96b" msprop:DbColumnName="ChestScan" msprop:FriendlyName="ChestScan">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RaceEthnicityCategory" msprop:design-time-name="d364da7f-a9d7-4a3d-b60d-24d43cd82a71" msprop:DbColumnName="RaceEthnicityCategory" msprop:FriendlyName="RaceEthnicityCategory">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AgeCategory" msprop:design-time-name="1c3233d8-25a5-4d12-a5ac-cb5cd13a93c1" msprop:DbColumnName="AgeCategory" msprop:FriendlyName="AgeCategory">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HeightInMeters" msprop:design-time-name="688ffd8c-b370-474b-a5d5-515a85975a62" msprop:DbColumnName="HeightInMeters" msprop:FriendlyName="HeightInMeters" type="xs:double" />
+                  <xs:element name="WeightInKilograms" msprop:design-time-name="15244a85-fefd-4521-9fd5-bdda092403b6" msprop:DbColumnName="WeightInKilograms" msprop:FriendlyName="WeightInKilograms" type="xs:double" />
+                  <xs:element name="BMI" msprop:design-time-name="9f5ca608-4baa-46d7-a35c-3b312a4e0bc4" msprop:DbColumnName="BMI" msprop:FriendlyName="BMI" type="xs:double" />
+                  <xs:element name="AlcoholDrinkers" msprop:design-time-name="98764eb0-5e92-4624-9453-42a4c68ea2d3" msprop:DbColumnName="AlcoholDrinkers" msprop:FriendlyName="AlcoholDrinkers">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HIVTesting" msprop:design-time-name="896fcd4c-de82-448d-9c31-57aed5589e75" msprop:DbColumnName="HIVTesting" msprop:FriendlyName="HIVTesting">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FluVaxLast12" msprop:design-time-name="e298d984-92d8-41b4-97bc-8ecf68669db0" msprop:DbColumnName="FluVaxLast12" msprop:FriendlyName="FluVaxLast12">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PneumoVaxEver" msprop:design-time-name="420a6cb8-d6ef-43a5-91df-422810f1cc42" msprop:DbColumnName="PneumoVaxEver" msprop:FriendlyName="PneumoVaxEver">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TetanusLast10Tdap" msprop:design-time-name="1f14b95a-30f4-4ae3-914a-2a304f20780c" msprop:DbColumnName="TetanusLast10Tdap" msprop:FriendlyName="TetanusLast10Tdap">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HighRiskLastYear" msprop:design-time-name="d1325967-3256-4d81-b260-e879496bb9cd" msprop:DbColumnName="HighRiskLastYear" msprop:FriendlyName="HighRiskLastYear">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CovidPos" msprop:design-time-name="0a3848af-e8f2-42c3-ae70-3aae48b4edd4" msprop:DbColumnName="CovidPos" msprop:FriendlyName="CovidPos" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PatientID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="a658dbac-78ab-4d84-946d-a269fb7ab547" msprop:DbColumnName="PatientID" msprop:FriendlyName="PatientID" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_HeartDisease2022" />
+          <xs:field xpath="PatientID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <HeartDiseaseSourceView xmlns="" />
+  </Schema>
+</DataSourceView>

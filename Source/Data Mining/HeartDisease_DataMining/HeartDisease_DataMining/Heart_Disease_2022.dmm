@@ -1,0 +1,1835 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b7e18dc7-cbbb-43af-94bc-f30d74d8a737" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Heart_Disease_2022</ID>
+  <Name>Heart_Disease_2022</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_HeartDisease2022</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8941" scrolltop="-3250" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20937" y="10001" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="HeartDisease2022" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4374" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00001611000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_HeartDisease2022" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-8941</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3250</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="77324bda-91d1-42c5-bf3a-4bd8ba0c8dcf">
+    <DataSourceViewID>HeartDiseaseSourceView</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="12c2e8d2-c827-46f6-87df-7cf64c6ad052">
+      <ID>Age Category</ID>
+      <Name>Age Category</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f760efe9-6683-4e6f-88b0-48e79d1aea09">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2d7e71e9-4c8f-4d2d-b919-c2118968780a">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>AgeCategory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0d8fa731-b208-49ef-b6bf-e65c071ba109">
+      <ID>Alcohol Drinkers</ID>
+      <Name>Alcohol Drinkers</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3218ffdf-283c-481d-8fed-11e689a02206">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ceba348f-91cf-465d-8fa6-f6cd9f06ccbb">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>AlcoholDrinkers</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5a7a4970-8a66-4e20-beb7-9af8f006384f">
+      <ID>Blind Or Vision Difficulty</ID>
+      <Name>Blind Or Vision Difficulty</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a6f8ae6c-2e4f-42f2-b2b1-0631925ec3d1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99bc4095-83fd-44a0-b831-e5c3beea1091">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>BlindOrVisionDifficulty</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5d65ecd7-3388-4e92-b7e0-feeebe5e7fb1">
+      <ID>BMI</ID>
+      <Name>BMI</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31e19730-797b-4c29-9c62-aacd8f4d0d4b">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7743c280-719f-460d-95b7-1d6af3472eab">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>BMI</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="37e8598a-83e4-49f1-8fdb-48a9fb17de5f">
+      <ID>Chest Scan</ID>
+      <Name>Chest Scan</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="93cc8ac2-f023-4cf1-ae90-b34a59213df1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ccf1c819-0c40-4735-a2c8-105a6cc2fa00">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>ChestScan</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2cedac98-047d-4673-882d-5a76daf5b6ff">
+      <ID>Covid Pos</ID>
+      <Name>Covid Pos</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc08fb98-a7de-4f4a-b838-a0948ffd4f4b">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb0b328c-905e-4074-9b97-fd3d43560562">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>CovidPos</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8a3b9cf2-1ec0-4188-b9be-e2f4c3964893">
+      <ID>Deaf Or Hard Of Hearing</ID>
+      <Name>Deaf Or Hard Of Hearing</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b813f1f6-da32-4c78-9cd1-6dd8c440cbe0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fe8ad4f8-bb14-4159-aade-274cd0cd6e82">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>DeafOrHardOfHearing</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7275b43a-2a64-460c-b91e-db1fef9d870f">
+      <ID>Difficulty Concentrating</ID>
+      <Name>Difficulty Concentrating</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15988a8f-9daa-44ed-b874-dc05e5d57e04">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="04a79635-3a4b-44ae-98eb-29bdf2cb1b44">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>DifficultyConcentrating</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9f5b2139-b0f3-480f-93c3-1d722ec05ce7">
+      <ID>Difficulty Dressing Bathing</ID>
+      <Name>Difficulty Dressing Bathing</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1789a01e-15d6-4e6f-9572-9881245e2fb2">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fac68b75-65ea-4cfa-b007-9d69073b3df5">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>DifficultyDressingBathing</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8ca56e3d-987c-4883-9fbc-acbf6fb6b87d">
+      <ID>Difficulty Errands</ID>
+      <Name>Difficulty Errands</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="98f46ac8-3e49-4b19-8930-2580a007a587">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9fc0243-c1a7-4589-94b0-d0f08de3ab6a">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>DifficultyErrands</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f9b4adb8-c7e0-434b-a463-8726a063faed">
+      <ID>Difficulty Walking</ID>
+      <Name>Difficulty Walking</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a45e7e2-e614-48fd-a31f-2a403e2c69d4">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d0fa65c-462b-4f70-97c8-2e497b62de75">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>DifficultyWalking</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ec14f560-a306-4cc0-8c2d-f709c05be6b6">
+      <ID>E Cigarette Usage</ID>
+      <Name>E Cigarette Usage</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f58b1b4f-0809-49fc-92cf-7712e74c3145">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f20520b4-a28d-4656-8b45-dc27e4022a36">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>ECigaretteUsage</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="df2dd86e-1dd3-459a-b76b-2f96e5ca02f3">
+      <ID>Flu Vax Last12</ID>
+      <Name>Flu Vax Last12</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="faefd1dd-2591-4d66-90cc-d6e7b0a97631">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1fd7fb55-bfe5-46f3-83c2-19ff6388d484">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>FluVaxLast12</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a981f710-9fd6-4990-9e79-2b1f340945e0">
+      <ID>General Health</ID>
+      <Name>General Health</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f4bc0021-239a-41b1-b099-0ff424ae18cd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb1588ee-1975-4758-8b64-b835a51d7554">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>GeneralHealth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="546c37ea-6261-45ad-928e-8d1c5905e1d3">
+      <ID>Had Angina</ID>
+      <Name>Had Angina</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1537094a-acc7-4b95-9a64-cf325d0898e1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cff7fe9b-5c02-4284-837e-7e5929991c21">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadAngina</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4d02a88f-f9c0-4b98-a800-cde10c9ca176">
+      <ID>Had Arthritis</ID>
+      <Name>Had Arthritis</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="269c9a7b-8b79-40fb-8280-5ba124a0dcdd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59f591c5-149d-4f3d-852e-949865bb09a6">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadArthritis</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cf9cb804-cb6e-4c40-abb3-0bda7b3908df">
+      <ID>Had Asthma</ID>
+      <Name>Had Asthma</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="213bc436-5fea-4e4c-af89-643d69f52b85">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd39ae5c-2416-4239-8378-161ef729dcb3">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadAsthma</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ae7c05b1-df1d-4099-9e90-4d9f897e4223">
+      <ID>Had COPD</ID>
+      <Name>Had COPD</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="697c4787-ed3f-43a4-9eba-07429faccbc5">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a5ab615f-84de-4f38-8fb4-ae114bafbadc">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadCOPD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="626b5e04-4c3b-47e4-a664-ddd217d8e6c8">
+      <ID>Had Depressive Disorder</ID>
+      <Name>Had Depressive Disorder</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d922e927-9025-4e59-a512-de7cfb490427">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6aab2261-b465-47ac-ad8f-c08fda3bac98">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadDepressiveDisorder</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d435aac4-482a-48c2-8c47-85c6eab1f5e0">
+      <ID>Had Diabetes</ID>
+      <Name>Had Diabetes</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="33f1e102-8064-4c6d-b15c-60f5ecf01773">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f96c743a-fa8e-4990-aa69-1d2fea8fdf9c">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadDiabetes</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="01939f0c-1d68-4959-ba43-0ff01abe5687">
+      <ID>Had Heart Attack</ID>
+      <Name>Had Heart Attack</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a15a4cd6-2fc1-45c3-b30b-55097deccc28">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9a5d83d-74ff-4872-bd50-6921d5479c39">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadHeartAttack</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="60fa3791-edda-4a64-8047-30fc67e62f0a">
+      <ID>Had Kidney Disease</ID>
+      <Name>Had Kidney Disease</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="11f0d26b-0703-4b08-a8e6-c3ee71448b07">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0528842f-9f7b-4ca3-8641-559d04ef6c06">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadKidneyDisease</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7f07e627-84cf-4ba5-a5c3-8d242b51ddcb">
+      <ID>Had Skin Cancer</ID>
+      <Name>Had Skin Cancer</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ea437b98-9582-4b7a-bbdd-4f8a5173c00c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="824ecaf5-8358-405b-9435-b2f5d6a3cd2e">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadSkinCancer</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="54d5ebad-cc5e-4f09-930f-493fc264833f">
+      <ID>Had Stroke</ID>
+      <Name>Had Stroke</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4f00f076-4990-4157-97e1-763f97cc6b44">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f83619f8-00c7-4c1e-8807-acf330f1ad9c">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HadStroke</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c6a2ff2a-74f1-4611-bb2a-49ac5744fd48">
+      <ID>Height In Meters</ID>
+      <Name>Height In Meters</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f9a53772-3131-4339-9d3c-4eb8031b2448">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b9877ec6-6332-48cd-b810-9a9d66672916">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HeightInMeters</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="894845f2-82d2-48d0-aec1-e9d5c6d0f719">
+      <ID>High Risk Last Year</ID>
+      <Name>High Risk Last Year</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d4ecdd60-af53-4f43-baa0-3c92cc01e81e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="95b608c6-3a0a-441f-ab9a-a8f65b45c778">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HighRiskLastYear</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f66562a6-6791-46a8-b435-7e218d20b917">
+      <ID>HIV Testing</ID>
+      <Name>HIV Testing</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="701d8892-8136-4c23-a1f3-7b756f07ff90">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="297c1055-0ba8-4d37-b2ee-06e5ea39a53c">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>HIVTesting</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b19ba10b-0bc6-4d81-a244-8bcc0d1fed2a">
+      <ID>Last Checkup Time</ID>
+      <Name>Last Checkup Time</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4ed57ff8-2c48-462a-86a7-3c605feb7942">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8a776062-1760-4d79-8d03-fee042a365b0">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>LastCheckupTime</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7a302824-0448-4652-a0ce-85a61329d0fa">
+      <ID>Mental Health Days</ID>
+      <Name>Mental Health Days</Name>
+      <Type>Double</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d14be604-86c5-4bf9-9b78-7921c9eede84">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9c7b9ad-dbfe-4990-8ade-e02198137670">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>MentalHealthDays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a2a2b5c4-5a7f-4d81-865c-51bbbef5adca">
+      <ID>Patient ID</ID>
+      <Name>Patient ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d736a45f-c78a-4660-a97a-bc93a86adbb1">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46ef8622-e522-4a8c-a76a-be914bd520ab">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>PatientID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3b240ef1-7e0f-4e9c-8887-82fc576c384d">
+      <ID>Physical Activities</ID>
+      <Name>Physical Activities</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="284c4ce4-7c66-4199-8c65-7e264082e10d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b183d18a-8cc0-407f-bca7-fb0837d0588e">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>PhysicalActivities</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="10e77522-7af1-4874-881b-be9ae5969d84">
+      <ID>Physical Health Days</ID>
+      <Name>Physical Health Days</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="507a0407-0303-4a68-9a57-2de7bd6725bb">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ea79cf97-8152-4c4d-93b7-28d3a36ce353">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>PhysicalHealthDays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="737cdb62-e402-4258-b922-953c2f2a9544">
+      <ID>Pneumo Vax Ever</ID>
+      <Name>Pneumo Vax Ever</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5050a111-7882-4553-aa58-729e4bbc6ba0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2b173f69-3aae-4e3b-9206-1006a1d457c8">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>PneumoVaxEver</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="13bf571f-0d3a-4ba4-9220-20283eda8d74">
+      <ID>Race Ethnicity Category</ID>
+      <Name>Race Ethnicity Category</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="050956f9-4d28-4f24-94dc-192ddb3b0fc8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8e98c5a8-a4f2-4b27-a798-29c8968f9367">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>RaceEthnicityCategory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="50d3c364-f995-4934-8e7e-6d89aa145cc5">
+      <ID>Removed Teeth</ID>
+      <Name>Removed Teeth</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a1f1dda8-dfc5-4bbe-b6a2-8f90144595be">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c666b334-0103-4efc-a637-0aa2a0d46e63">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>RemovedTeeth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fe758032-d1f3-4677-9b8d-d0417674dd01">
+      <ID>Sex</ID>
+      <Name>Sex</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e097ce8-90d2-4bd6-83df-85a782192c58">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e2369548-d020-45e5-a2b2-73f1a61f9a74">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>Sex</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3dd050e0-8fd2-41a0-b723-ec91a1454b6d">
+      <ID>Sleep Hours</ID>
+      <Name>Sleep Hours</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="558c0bde-04ff-44a1-82c2-00c001bc71e3">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2bd53d5d-a37d-4ebc-a77d-24cc8f3513cc">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>SleepHours</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3d7cc0af-eec8-44ac-af2f-ecc5a9374040">
+      <ID>Smoker Status</ID>
+      <Name>Smoker Status</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb32df68-49d6-4f9d-b221-708ecac2e48b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0e77178f-3ce0-4ada-9954-dbd8767cd696">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>SmokerStatus</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="07362824-3058-423c-969c-70ff2af97cc0">
+      <ID>State</ID>
+      <Name>State</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="651b5d87-eb93-4a9f-930d-162d94a6f377">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00ad8098-4151-41e5-b2b8-c09677df752b">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>State</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d4d2cc6b-ab54-4c76-bced-ec10a01b88b3">
+      <ID>Tetanus Last10 Tdap</ID>
+      <Name>Tetanus Last10 Tdap</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ab2f3573-23cb-46a6-a138-bb789b8d8a67">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d117d3a5-b3ee-48d9-96c2-f0a39ec30a23">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>TetanusLast10Tdap</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ea83fec2-75a0-4551-bb67-5023e08c85e2">
+      <ID>Weight In Kilograms</ID>
+      <Name>Weight In Kilograms</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5322643d-abd3-485f-a351-0a8ebce7b42c">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96daee15-b40b-447b-a08b-3487aa132e52">
+            <TableID>dbo_HeartDisease2022</TableID>
+            <ColumnID>WeightInKilograms</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="314ce596-5416-4ef6-b168-52772e9c4fa0">
+      <ID>Heart_Disease_DecisionTree</ID>
+      <Name>Heart_Disease_DecisionTree</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="965d1cce-8e3f-47c1-9c06-8b6682ac28bc">
+          <ID>Age Category</ID>
+          <Name>Age Category</Name>
+          <SourceColumnID>Age Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e1d67956-15f3-4fac-8f28-f11b76714de9">
+          <ID>Alcohol Drinkers</ID>
+          <Name>Alcohol Drinkers</Name>
+          <SourceColumnID>Alcohol Drinkers</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2a382493-dee0-4d49-a3ce-49407abd6f9e">
+          <ID>Blind Or Vision Difficulty</ID>
+          <Name>Blind Or Vision Difficulty</Name>
+          <SourceColumnID>Blind Or Vision Difficulty</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="96cd339d-b1bb-4541-bf89-96352b2aa180">
+          <ID>BMI</ID>
+          <Name>BMI</Name>
+          <SourceColumnID>BMI</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="df298939-840d-402f-b56e-b14fac74003d">
+          <ID>Chest Scan</ID>
+          <Name>Chest Scan</Name>
+          <SourceColumnID>Chest Scan</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f8eaba43-48dd-43ca-a66e-a8d6b14a0533">
+          <ID>Covid Pos</ID>
+          <Name>Covid Pos</Name>
+          <SourceColumnID>Covid Pos</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8eb3e619-c89d-4b1e-9eef-0c9d068f676c">
+          <ID>Deaf Or Hard Of Hearing</ID>
+          <Name>Deaf Or Hard Of Hearing</Name>
+          <SourceColumnID>Deaf Or Hard Of Hearing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f0eccd7f-3a31-443e-96d6-9877ebd04ca8">
+          <ID>Difficulty Concentrating</ID>
+          <Name>Difficulty Concentrating</Name>
+          <SourceColumnID>Difficulty Concentrating</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="741e5a52-c1d3-46e5-9e07-9fc0e698b6e7">
+          <ID>Difficulty Dressing Bathing</ID>
+          <Name>Difficulty Dressing Bathing</Name>
+          <SourceColumnID>Difficulty Dressing Bathing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c65152b2-d5d3-46b2-bf59-3c73a8927e23">
+          <ID>Difficulty Errands</ID>
+          <Name>Difficulty Errands</Name>
+          <SourceColumnID>Difficulty Errands</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4f930c80-aa89-4ecb-94f4-d821010f0500">
+          <ID>Difficulty Walking</ID>
+          <Name>Difficulty Walking</Name>
+          <SourceColumnID>Difficulty Walking</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="255aebb7-41aa-402a-8a0f-f2c40fc457a5">
+          <ID>E Cigarette Usage</ID>
+          <Name>E Cigarette Usage</Name>
+          <SourceColumnID>E Cigarette Usage</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b3d5e752-490e-4b97-b8cf-551f91794dd6">
+          <ID>Flu Vax Last12</ID>
+          <Name>Flu Vax Last12</Name>
+          <SourceColumnID>Flu Vax Last12</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9703eb29-ece0-4b14-a8cd-18bf5603a276">
+          <ID>General Health</ID>
+          <Name>General Health</Name>
+          <SourceColumnID>General Health</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="85231565-d04b-459a-9189-b5b568cf1265">
+          <ID>Had Angina</ID>
+          <Name>Had Angina</Name>
+          <SourceColumnID>Had Angina</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2726b9a3-48bd-4e44-bd6f-5cb7a3a702b2">
+          <ID>Had Arthritis</ID>
+          <Name>Had Arthritis</Name>
+          <SourceColumnID>Had Arthritis</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ffba12af-11ca-4a22-80e5-c10ce7eea81b">
+          <ID>Had Asthma</ID>
+          <Name>Had Asthma</Name>
+          <SourceColumnID>Had Asthma</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fec8d0fe-82b5-4dd3-a6ab-22571265e9da">
+          <ID>Had COPD</ID>
+          <Name>Had COPD</Name>
+          <SourceColumnID>Had COPD</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6d348318-2e39-4290-a973-7f04f5a0acf4">
+          <ID>Had Depressive Disorder</ID>
+          <Name>Had Depressive Disorder</Name>
+          <SourceColumnID>Had Depressive Disorder</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1a8be8d3-7221-4e72-9e41-c4bd1c10ee18">
+          <ID>Had Diabetes</ID>
+          <Name>Had Diabetes</Name>
+          <SourceColumnID>Had Diabetes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4f17b485-2e94-4053-bacf-c517f8467a10">
+          <ID>Had Heart Attack</ID>
+          <Name>Had Heart Attack</Name>
+          <SourceColumnID>Had Heart Attack</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="981ae517-c3e5-4f8d-84bb-6fe6c0c9e928">
+          <ID>Had Kidney Disease</ID>
+          <Name>Had Kidney Disease</Name>
+          <SourceColumnID>Had Kidney Disease</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="60339c77-5777-434e-a5fe-8d2a447a630d">
+          <ID>Had Skin Cancer</ID>
+          <Name>Had Skin Cancer</Name>
+          <SourceColumnID>Had Skin Cancer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="36170b27-0fb4-4699-99f9-0fd356a487ad">
+          <ID>Had Stroke</ID>
+          <Name>Had Stroke</Name>
+          <SourceColumnID>Had Stroke</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5b7a3d75-7821-43bd-a569-0509980f3a2b">
+          <ID>Height In Meters</ID>
+          <Name>Height In Meters</Name>
+          <SourceColumnID>Height In Meters</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="ab9b1d13-901d-4dc3-8426-6f610353afbf">
+          <ID>High Risk Last Year</ID>
+          <Name>High Risk Last Year</Name>
+          <SourceColumnID>High Risk Last Year</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8cad43a5-2b6d-4ed9-8e83-bb3a1c18994a">
+          <ID>HIV Testing</ID>
+          <Name>HIV Testing</Name>
+          <SourceColumnID>HIV Testing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9675bf21-896b-4548-94c0-55fc2892650c">
+          <ID>Last Checkup Time</ID>
+          <Name>Last Checkup Time</Name>
+          <SourceColumnID>Last Checkup Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="07f6e649-a710-47d2-a2ed-4b3b316b1c0f">
+          <ID>Mental Health Days</ID>
+          <Name>Mental Health Days</Name>
+          <SourceColumnID>Mental Health Days</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="31672ba8-2ff0-421a-8c42-66c0a52f3adb">
+          <ID>Patient ID</ID>
+          <Name>Patient ID</Name>
+          <SourceColumnID>Patient ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="cbe571c6-95b4-43f6-a076-5fb738c64ada">
+          <ID>Physical Activities</ID>
+          <Name>Physical Activities</Name>
+          <SourceColumnID>Physical Activities</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c25946c8-5acc-475b-bc7e-38e7e778a9a5">
+          <ID>Physical Health Days</ID>
+          <Name>Physical Health Days</Name>
+          <SourceColumnID>Physical Health Days</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="cace314c-3e24-4075-a689-226ed429e16a">
+          <ID>Pneumo Vax Ever</ID>
+          <Name>Pneumo Vax Ever</Name>
+          <SourceColumnID>Pneumo Vax Ever</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a78ae5b4-7094-4e0a-b7a6-80e4d35cbe72">
+          <ID>Race Ethnicity Category</ID>
+          <Name>Race Ethnicity Category</Name>
+          <SourceColumnID>Race Ethnicity Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="bd962f3d-7cf1-4e1b-8c4e-5e3b62c962f8">
+          <ID>Removed Teeth</ID>
+          <Name>Removed Teeth</Name>
+          <SourceColumnID>Removed Teeth</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2011b8ac-3567-4bef-ad39-d665d77b5224">
+          <ID>Sex</ID>
+          <Name>Sex</Name>
+          <SourceColumnID>Sex</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="42a4d7f5-cafd-445d-abaa-ea5e1d29c073">
+          <ID>Sleep Hours</ID>
+          <Name>Sleep Hours</Name>
+          <SourceColumnID>Sleep Hours</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="856dc056-2f6c-40ef-8e6f-2fedc1f3dd2b">
+          <ID>Smoker Status</ID>
+          <Name>Smoker Status</Name>
+          <SourceColumnID>Smoker Status</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2eae56da-6254-41c9-8a09-b75a9f2a854f">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceColumnID>State</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="81159a96-bbde-40ca-bb26-ef99f91b1412">
+          <ID>Tetanus Last10 Tdap</ID>
+          <Name>Tetanus Last10 Tdap</Name>
+          <SourceColumnID>Tetanus Last10 Tdap</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="86e9fadf-6cdf-4fcd-b1a8-a37b2aa2b500">
+          <ID>Weight In Kilograms</ID>
+          <Name>Weight In Kilograms</Name>
+          <SourceColumnID>Weight In Kilograms</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="9390949f-72c6-49e3-958f-fd448ac769a4">
+      <ID>Heart_Disease_Clustering</ID>
+      <Name>Heart_Disease_Clustering</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="56c2e85c-35cb-46e7-a572-ace311c0a13e">
+          <ID>Age Category</ID>
+          <Name>Age Category</Name>
+          <SourceColumnID>Age Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e8f7b294-3648-49e5-ae04-e47cdf8ac5f9">
+          <ID>Alcohol Drinkers</ID>
+          <Name>Alcohol Drinkers</Name>
+          <SourceColumnID>Alcohol Drinkers</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2df774d8-95c7-4390-b3c2-2f9bcbd862af">
+          <ID>Blind Or Vision Difficulty</ID>
+          <Name>Blind Or Vision Difficulty</Name>
+          <SourceColumnID>Blind Or Vision Difficulty</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ee1f753b-626e-40b0-9ad9-80e0e050520a">
+          <ID>BMI</ID>
+          <Name>BMI</Name>
+          <SourceColumnID>BMI</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="245a9981-f700-43b3-a4d8-e8d0ed557690">
+          <ID>Chest Scan</ID>
+          <Name>Chest Scan</Name>
+          <SourceColumnID>Chest Scan</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fb18a950-ce9c-4ae5-b4c0-cb4ac8e9549c">
+          <ID>Covid Pos</ID>
+          <Name>Covid Pos</Name>
+          <SourceColumnID>Covid Pos</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a51dd030-d5fd-4604-b573-68197cb236e6">
+          <ID>Deaf Or Hard Of Hearing</ID>
+          <Name>Deaf Or Hard Of Hearing</Name>
+          <SourceColumnID>Deaf Or Hard Of Hearing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="80987d7c-5333-4d04-b325-01f391e50ded">
+          <ID>Difficulty Concentrating</ID>
+          <Name>Difficulty Concentrating</Name>
+          <SourceColumnID>Difficulty Concentrating</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="af36db11-2890-45ec-89e0-ddb8578d722c">
+          <ID>Difficulty Dressing Bathing</ID>
+          <Name>Difficulty Dressing Bathing</Name>
+          <SourceColumnID>Difficulty Dressing Bathing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ee4d2592-106e-4d0b-aa1f-188e65570daa">
+          <ID>Difficulty Errands</ID>
+          <Name>Difficulty Errands</Name>
+          <SourceColumnID>Difficulty Errands</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="96ebebc4-c835-40de-a76a-eb38c2ba196a">
+          <ID>Difficulty Walking</ID>
+          <Name>Difficulty Walking</Name>
+          <SourceColumnID>Difficulty Walking</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7975d7f2-8034-48ac-9c78-5df6d9dcb80d">
+          <ID>E Cigarette Usage</ID>
+          <Name>E Cigarette Usage</Name>
+          <SourceColumnID>E Cigarette Usage</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2359ee10-d37f-4a35-9abe-adf0eb75f2c3">
+          <ID>Flu Vax Last12</ID>
+          <Name>Flu Vax Last12</Name>
+          <SourceColumnID>Flu Vax Last12</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4066564a-0c6e-4903-8c76-7ef40ae8f7e0">
+          <ID>General Health</ID>
+          <Name>General Health</Name>
+          <SourceColumnID>General Health</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b6a6f315-9f06-4ed4-bc8c-ec7b9e2abd40">
+          <ID>Had Angina</ID>
+          <Name>Had Angina</Name>
+          <SourceColumnID>Had Angina</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3489558f-8482-4deb-a54b-af9c375b8abb">
+          <ID>Had Arthritis</ID>
+          <Name>Had Arthritis</Name>
+          <SourceColumnID>Had Arthritis</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="28e8c3d7-80ef-40b6-9051-a26ad7caa75b">
+          <ID>Had Asthma</ID>
+          <Name>Had Asthma</Name>
+          <SourceColumnID>Had Asthma</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6de8f4c7-6ac8-423b-85c2-e6375e747447">
+          <ID>Had COPD</ID>
+          <Name>Had COPD</Name>
+          <SourceColumnID>Had COPD</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8e9f48f8-8e2f-4cb2-aed0-6093cd50b63c">
+          <ID>Had Depressive Disorder</ID>
+          <Name>Had Depressive Disorder</Name>
+          <SourceColumnID>Had Depressive Disorder</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="567dd81e-49f8-4878-98c9-db6645864d13">
+          <ID>Had Diabetes</ID>
+          <Name>Had Diabetes</Name>
+          <SourceColumnID>Had Diabetes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3b4e0397-b519-40fd-b114-63bfe64371b8">
+          <ID>Had Heart Attack</ID>
+          <Name>Had Heart Attack</Name>
+          <SourceColumnID>Had Heart Attack</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="918b9c29-9afe-485b-aeec-ed57c6ac706c">
+          <ID>Had Kidney Disease</ID>
+          <Name>Had Kidney Disease</Name>
+          <SourceColumnID>Had Kidney Disease</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3e51d665-a103-436f-9206-656fe9973bfe">
+          <ID>Had Skin Cancer</ID>
+          <Name>Had Skin Cancer</Name>
+          <SourceColumnID>Had Skin Cancer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a66d285e-f10c-431d-9fa2-effeb2d623a7">
+          <ID>Had Stroke</ID>
+          <Name>Had Stroke</Name>
+          <SourceColumnID>Had Stroke</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4e9dc011-11c9-454a-a529-aa44eb9be126">
+          <ID>Height In Meters</ID>
+          <Name>Height In Meters</Name>
+          <SourceColumnID>Height In Meters</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cff55368-16fd-43eb-bc4b-a4845803f5e1">
+          <ID>High Risk Last Year</ID>
+          <Name>High Risk Last Year</Name>
+          <SourceColumnID>High Risk Last Year</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8f4a1710-6a63-4f0c-8f49-0fcc983b6172">
+          <ID>HIV Testing</ID>
+          <Name>HIV Testing</Name>
+          <SourceColumnID>HIV Testing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6e6e1c24-f55e-4c9c-a62d-004f032798a6">
+          <ID>Last Checkup Time</ID>
+          <Name>Last Checkup Time</Name>
+          <SourceColumnID>Last Checkup Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e2fdb860-526d-4970-b371-48ea3b9f4812">
+          <ID>Mental Health Days</ID>
+          <Name>Mental Health Days</Name>
+          <SourceColumnID>Mental Health Days</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0fe2662e-1a8f-4001-ba25-ba47e6a81d6e">
+          <ID>Patient ID</ID>
+          <Name>Patient ID</Name>
+          <SourceColumnID>Patient ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="ad3dc15f-ee18-49ef-81b6-182ece7739d8">
+          <ID>Physical Activities</ID>
+          <Name>Physical Activities</Name>
+          <SourceColumnID>Physical Activities</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1f707bc7-da63-4ed6-bb29-b333e5a7ccb9">
+          <ID>Physical Health Days</ID>
+          <Name>Physical Health Days</Name>
+          <SourceColumnID>Physical Health Days</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="945a6820-be1e-4fce-ac59-b64e567fd372">
+          <ID>Pneumo Vax Ever</ID>
+          <Name>Pneumo Vax Ever</Name>
+          <SourceColumnID>Pneumo Vax Ever</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3e6ac666-f1ea-483d-b08d-cd42426883bb">
+          <ID>Race Ethnicity Category</ID>
+          <Name>Race Ethnicity Category</Name>
+          <SourceColumnID>Race Ethnicity Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a148cc43-469d-4bdd-aae0-8247fa419959">
+          <ID>Removed Teeth</ID>
+          <Name>Removed Teeth</Name>
+          <SourceColumnID>Removed Teeth</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="511e8040-3364-4d56-852a-46a8f3be4e43">
+          <ID>Sex</ID>
+          <Name>Sex</Name>
+          <SourceColumnID>Sex</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8c3c55f4-4be3-4abb-9d21-1830a6c85c49">
+          <ID>Sleep Hours</ID>
+          <Name>Sleep Hours</Name>
+          <SourceColumnID>Sleep Hours</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="30269865-2664-44bb-821b-1baf2a7dd3e5">
+          <ID>Smoker Status</ID>
+          <Name>Smoker Status</Name>
+          <SourceColumnID>Smoker Status</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="73159ea8-389b-4bd3-820b-5bf6d080e409">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceColumnID>State</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="79ec961d-5b46-4b05-86e4-d214eceb2e1a">
+          <ID>Tetanus Last10 Tdap</ID>
+          <Name>Tetanus Last10 Tdap</Name>
+          <SourceColumnID>Tetanus Last10 Tdap</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ed589429-e517-4958-b309-5a224f2699f4">
+          <ID>Weight In Kilograms</ID>
+          <Name>Weight In Kilograms</Name>
+          <SourceColumnID>Weight In Kilograms</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="25f72f73-9d68-4b0f-a4eb-a4525b6c38f1">
+      <ID>Heart_Disease_NaiveBayes</ID>
+      <Name>Heart_Disease_NaiveBayes</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="dffc9b3e-1626-4540-8e38-b7413bdb2da5">
+          <ID>Age Category</ID>
+          <Name>Age Category</Name>
+          <SourceColumnID>Age Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d8bb8e35-f76a-4f2b-ad79-72f38d0d6d8b">
+          <ID>Alcohol Drinkers</ID>
+          <Name>Alcohol Drinkers</Name>
+          <SourceColumnID>Alcohol Drinkers</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="937d965a-12b6-4dbe-aaa8-956c6014048a">
+          <ID>Blind Or Vision Difficulty</ID>
+          <Name>Blind Or Vision Difficulty</Name>
+          <SourceColumnID>Blind Or Vision Difficulty</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="81b3e45f-51d4-45ad-a2c4-f1f2c4612248">
+          <ID>Chest Scan</ID>
+          <Name>Chest Scan</Name>
+          <SourceColumnID>Chest Scan</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ef2cefd5-bafa-4786-9ecd-5486df64b268">
+          <ID>Covid Pos</ID>
+          <Name>Covid Pos</Name>
+          <SourceColumnID>Covid Pos</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="98cad567-b363-4e00-9179-c96db8f05510">
+          <ID>Deaf Or Hard Of Hearing</ID>
+          <Name>Deaf Or Hard Of Hearing</Name>
+          <SourceColumnID>Deaf Or Hard Of Hearing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c8579dbe-d047-4743-bfa0-e90c13fbbd1c">
+          <ID>Difficulty Concentrating</ID>
+          <Name>Difficulty Concentrating</Name>
+          <SourceColumnID>Difficulty Concentrating</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0892ccf2-616d-4673-82b8-1b0db9f54158">
+          <ID>Difficulty Dressing Bathing</ID>
+          <Name>Difficulty Dressing Bathing</Name>
+          <SourceColumnID>Difficulty Dressing Bathing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3e04b629-5ec6-4857-816d-220aafbbd12e">
+          <ID>Difficulty Errands</ID>
+          <Name>Difficulty Errands</Name>
+          <SourceColumnID>Difficulty Errands</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9ba1a841-dcec-4f0a-b6c0-096264a8c129">
+          <ID>Difficulty Walking</ID>
+          <Name>Difficulty Walking</Name>
+          <SourceColumnID>Difficulty Walking</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b4269b29-2c6a-446b-aed5-ad93aa609734">
+          <ID>E Cigarette Usage</ID>
+          <Name>E Cigarette Usage</Name>
+          <SourceColumnID>E Cigarette Usage</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9f5e006d-9251-4cdb-acb2-5a00d0d03f2c">
+          <ID>Flu Vax Last12</ID>
+          <Name>Flu Vax Last12</Name>
+          <SourceColumnID>Flu Vax Last12</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cb559b79-ac31-4a39-a1d7-29600a2b2029">
+          <ID>General Health</ID>
+          <Name>General Health</Name>
+          <SourceColumnID>General Health</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2b209bbf-ec4b-4d8c-a998-169193d3b948">
+          <ID>Had Angina</ID>
+          <Name>Had Angina</Name>
+          <SourceColumnID>Had Angina</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4251764f-5fe1-426d-a523-e3011accd71b">
+          <ID>Had Arthritis</ID>
+          <Name>Had Arthritis</Name>
+          <SourceColumnID>Had Arthritis</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a9cbfd6d-4653-4f87-a354-93ed75d904b2">
+          <ID>Had Asthma</ID>
+          <Name>Had Asthma</Name>
+          <SourceColumnID>Had Asthma</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="67de0076-faf4-4f02-a712-3f1f708677e3">
+          <ID>Had COPD</ID>
+          <Name>Had COPD</Name>
+          <SourceColumnID>Had COPD</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5ee9445f-467d-45e7-96da-a95c06849c6f">
+          <ID>Had Depressive Disorder</ID>
+          <Name>Had Depressive Disorder</Name>
+          <SourceColumnID>Had Depressive Disorder</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e800ec8d-c754-4592-80d2-c4fba87fb988">
+          <ID>Had Diabetes</ID>
+          <Name>Had Diabetes</Name>
+          <SourceColumnID>Had Diabetes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1dbdb3d9-717d-4d87-b8c9-3371e2a8956e">
+          <ID>Had Heart Attack</ID>
+          <Name>Had Heart Attack</Name>
+          <SourceColumnID>Had Heart Attack</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="51612f88-95d4-41d3-bb4d-9d7f5c474543">
+          <ID>Had Kidney Disease</ID>
+          <Name>Had Kidney Disease</Name>
+          <SourceColumnID>Had Kidney Disease</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e0694d1b-c46e-458f-9d3f-b2ab10004427">
+          <ID>Had Skin Cancer</ID>
+          <Name>Had Skin Cancer</Name>
+          <SourceColumnID>Had Skin Cancer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f04eab74-5f12-4126-a12c-4039035695a5">
+          <ID>Had Stroke</ID>
+          <Name>Had Stroke</Name>
+          <SourceColumnID>Had Stroke</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="457839ad-d69e-40d1-a003-f76dd32bafa3">
+          <ID>High Risk Last Year</ID>
+          <Name>High Risk Last Year</Name>
+          <SourceColumnID>High Risk Last Year</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="403fc8dc-0e68-4ea6-b3b9-daa7100c4c2c">
+          <ID>HIV Testing</ID>
+          <Name>HIV Testing</Name>
+          <SourceColumnID>HIV Testing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="79ffb62a-b50a-4146-be0d-b14fc7073a72">
+          <ID>Last Checkup Time</ID>
+          <Name>Last Checkup Time</Name>
+          <SourceColumnID>Last Checkup Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ffc7cee9-f769-4067-8daf-542579b9126e">
+          <ID>Mental Health Days</ID>
+          <Name>Mental Health Days</Name>
+          <SourceColumnID>Mental Health Days</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cf1fecbd-30cb-4364-a83c-fe2595f5b994">
+          <ID>Patient ID</ID>
+          <Name>Patient ID</Name>
+          <SourceColumnID>Patient ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="340da21a-598c-49d9-b8be-65e07449870b">
+          <ID>Physical Activities</ID>
+          <Name>Physical Activities</Name>
+          <SourceColumnID>Physical Activities</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="24328596-1ed6-41c8-a9ba-692fca123772">
+          <ID>Pneumo Vax Ever</ID>
+          <Name>Pneumo Vax Ever</Name>
+          <SourceColumnID>Pneumo Vax Ever</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5b268cf9-4c68-49b2-9912-d3219cb72b26">
+          <ID>Race Ethnicity Category</ID>
+          <Name>Race Ethnicity Category</Name>
+          <SourceColumnID>Race Ethnicity Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="bee45d91-4751-48a5-8aa3-ede4d0b5af76">
+          <ID>Removed Teeth</ID>
+          <Name>Removed Teeth</Name>
+          <SourceColumnID>Removed Teeth</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="49592c5a-a08e-4ce8-99b4-6aad97f791ed">
+          <ID>Sex</ID>
+          <Name>Sex</Name>
+          <SourceColumnID>Sex</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="51df4995-cc15-4e0d-a133-375019d5b726">
+          <ID>Smoker Status</ID>
+          <Name>Smoker Status</Name>
+          <SourceColumnID>Smoker Status</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1ee60348-f948-4650-9c63-7e66469d83c0">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceColumnID>State</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6251a8a9-5078-4408-88e7-9a4f844779b0">
+          <ID>Tetanus Last10 Tdap</ID>
+          <Name>Tetanus Last10 Tdap</Name>
+          <SourceColumnID>Tetanus Last10 Tdap</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="1362ca53-1a94-4821-8bc3-bc93bb53f0d6">
+      <ID>Heart_Disease_NaiveBayes_Male</ID>
+      <Name>Heart_Disease_NaiveBayes_Male</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Microsoft.AnalysisServices.MiningModel</Name>
+          <Value>
+            <Microsoft.AnalysisServices.MiningModel xmlns="">
+              <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;MiningModelFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Items&gt;
+    &lt;FilterGridItem&gt;
+      &lt;IsGroup&gt;false&lt;/IsGroup&gt;
+      &lt;IsDataTable&gt;false&lt;/IsDataTable&gt;
+      &lt;Operator&gt;=&lt;/Operator&gt;
+      &lt;ColumnName&gt;Sex&lt;/ColumnName&gt;
+      &lt;ColumnID&gt;Sex&lt;/ColumnID&gt;
+      &lt;Value&gt;Male&lt;/Value&gt;
+      &lt;AndOr&gt;None&lt;/AndOr&gt;
+      &lt;ChildItems /&gt;
+    &lt;/FilterGridItem&gt;
+    &lt;FilterGridItem&gt;
+      &lt;IsGroup&gt;false&lt;/IsGroup&gt;
+      &lt;IsDataTable&gt;false&lt;/IsDataTable&gt;
+      &lt;ColumnName /&gt;
+      &lt;AndOr&gt;AND&lt;/AndOr&gt;
+      &lt;ChildItems /&gt;
+    &lt;/FilterGridItem&gt;
+  &lt;/Items&gt;
+&lt;/MiningModelFilter&gt;</Filter>
+            </Microsoft.AnalysisServices.MiningModel>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="e36c84c2-df18-4896-b526-007bbf976d3f">
+          <ID>Age Category</ID>
+          <Name>Age Category</Name>
+          <SourceColumnID>Age Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="72049ab8-7916-4453-9612-1f8fce381f03">
+          <ID>Alcohol Drinkers</ID>
+          <Name>Alcohol Drinkers</Name>
+          <SourceColumnID>Alcohol Drinkers</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="80922bde-9fe7-4989-9126-d830f7cbe173">
+          <ID>Blind Or Vision Difficulty</ID>
+          <Name>Blind Or Vision Difficulty</Name>
+          <SourceColumnID>Blind Or Vision Difficulty</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="95fc615a-8469-45b0-86cc-8fe5eeffd5d0">
+          <ID>Chest Scan</ID>
+          <Name>Chest Scan</Name>
+          <SourceColumnID>Chest Scan</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="55088b21-c510-4b8a-b2f6-14297aab2edd">
+          <ID>Covid Pos</ID>
+          <Name>Covid Pos</Name>
+          <SourceColumnID>Covid Pos</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="52bbe750-7046-4ba2-a3fd-252066de372f">
+          <ID>Deaf Or Hard Of Hearing</ID>
+          <Name>Deaf Or Hard Of Hearing</Name>
+          <SourceColumnID>Deaf Or Hard Of Hearing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6a081376-989c-4e84-94cc-38fb16a10963">
+          <ID>Difficulty Concentrating</ID>
+          <Name>Difficulty Concentrating</Name>
+          <SourceColumnID>Difficulty Concentrating</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="79086781-bdd5-4138-94ad-3fe5875310d8">
+          <ID>Difficulty Dressing Bathing</ID>
+          <Name>Difficulty Dressing Bathing</Name>
+          <SourceColumnID>Difficulty Dressing Bathing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="87c297db-76ac-4eed-b48d-5a3769d21299">
+          <ID>Difficulty Errands</ID>
+          <Name>Difficulty Errands</Name>
+          <SourceColumnID>Difficulty Errands</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1ab4e202-ae5b-40d8-93e8-a1190240465e">
+          <ID>Difficulty Walking</ID>
+          <Name>Difficulty Walking</Name>
+          <SourceColumnID>Difficulty Walking</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2238b88a-4ce1-4b7b-b439-8146fbf40b04">
+          <ID>E Cigarette Usage</ID>
+          <Name>E Cigarette Usage</Name>
+          <SourceColumnID>E Cigarette Usage</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ace79317-5352-4f3f-83ae-b2d84d9f1311">
+          <ID>Flu Vax Last12</ID>
+          <Name>Flu Vax Last12</Name>
+          <SourceColumnID>Flu Vax Last12</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="484827e3-d623-470f-9390-c4109dff6ef7">
+          <ID>General Health</ID>
+          <Name>General Health</Name>
+          <SourceColumnID>General Health</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8c11f007-e6c7-4e13-a379-cad1cf6b30e0">
+          <ID>Had Angina</ID>
+          <Name>Had Angina</Name>
+          <SourceColumnID>Had Angina</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cd9a54c4-beea-4d48-8d74-755638ef7686">
+          <ID>Had Arthritis</ID>
+          <Name>Had Arthritis</Name>
+          <SourceColumnID>Had Arthritis</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4236f479-178e-4f9d-8b5a-63a44461a121">
+          <ID>Had Asthma</ID>
+          <Name>Had Asthma</Name>
+          <SourceColumnID>Had Asthma</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="765c063c-5195-4fce-aec7-2f636562f6d8">
+          <ID>Had COPD</ID>
+          <Name>Had COPD</Name>
+          <SourceColumnID>Had COPD</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="282550c8-fad1-4fc4-a2c1-54f8d63fdfe4">
+          <ID>Had Depressive Disorder</ID>
+          <Name>Had Depressive Disorder</Name>
+          <SourceColumnID>Had Depressive Disorder</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cc4b1b11-4a46-45fb-8a5d-d404e6670484">
+          <ID>Had Diabetes</ID>
+          <Name>Had Diabetes</Name>
+          <SourceColumnID>Had Diabetes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="bfc170d2-cb73-45c3-8200-9a963e4a378a">
+          <ID>Had Heart Attack</ID>
+          <Name>Had Heart Attack</Name>
+          <SourceColumnID>Had Heart Attack</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="03056089-1fff-4750-954b-216641f0ab82">
+          <ID>Had Kidney Disease</ID>
+          <Name>Had Kidney Disease</Name>
+          <SourceColumnID>Had Kidney Disease</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1ade19ab-a00f-49e0-9d27-b2aa0006d468">
+          <ID>Had Skin Cancer</ID>
+          <Name>Had Skin Cancer</Name>
+          <SourceColumnID>Had Skin Cancer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="26e375a4-01f4-4cb8-be79-010f350c6f79">
+          <ID>Had Stroke</ID>
+          <Name>Had Stroke</Name>
+          <SourceColumnID>Had Stroke</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5bdc6b4d-855c-4758-98c5-bd24312db3bd">
+          <ID>High Risk Last Year</ID>
+          <Name>High Risk Last Year</Name>
+          <SourceColumnID>High Risk Last Year</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d0282c67-f8fe-43d5-a15d-3c062e026bba">
+          <ID>HIV Testing</ID>
+          <Name>HIV Testing</Name>
+          <SourceColumnID>HIV Testing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4a1f454a-d365-43c4-ad90-317ca82d8de4">
+          <ID>Last Checkup Time</ID>
+          <Name>Last Checkup Time</Name>
+          <SourceColumnID>Last Checkup Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6840d052-fe19-44de-aa18-97ec95864377">
+          <ID>Mental Health Days</ID>
+          <Name>Mental Health Days</Name>
+          <SourceColumnID>Mental Health Days</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a8fa342b-feb0-452a-8aba-743ab309b3d4">
+          <ID>Patient ID</ID>
+          <Name>Patient ID</Name>
+          <SourceColumnID>Patient ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="d5717e7f-349d-4293-80c0-0997778ed756">
+          <ID>Physical Activities</ID>
+          <Name>Physical Activities</Name>
+          <SourceColumnID>Physical Activities</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5d8d2f9e-5551-49d4-9ec9-c2a3d84449fe">
+          <ID>Pneumo Vax Ever</ID>
+          <Name>Pneumo Vax Ever</Name>
+          <SourceColumnID>Pneumo Vax Ever</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a8e175fd-7080-41c6-884e-e0e92c7c1dd2">
+          <ID>Race Ethnicity Category</ID>
+          <Name>Race Ethnicity Category</Name>
+          <SourceColumnID>Race Ethnicity Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="794566e7-ed3e-4623-892c-545d10e33909">
+          <ID>Removed Teeth</ID>
+          <Name>Removed Teeth</Name>
+          <SourceColumnID>Removed Teeth</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="364adfb2-3d93-41aa-8f21-6bc983ad2f2e">
+          <ID>Sex</ID>
+          <Name>Sex</Name>
+          <SourceColumnID>Sex</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="03ad0245-5ab1-48aa-9935-6db25a672017">
+          <ID>Smoker Status</ID>
+          <Name>Smoker Status</Name>
+          <SourceColumnID>Smoker Status</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5aff85f7-96b8-413e-a3e0-035b616ae8a8">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceColumnID>State</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="37d58e1f-c6e2-493d-9c66-20590f8a902e">
+          <ID>Tetanus Last10 Tdap</ID>
+          <Name>Tetanus Last10 Tdap</Name>
+          <SourceColumnID>Tetanus Last10 Tdap</SourceColumnID>
+        </Column>
+      </Columns>
+      <ddl100_100:Filter>[Sex] = 'Male'</ddl100_100:Filter>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="ccb433c4-0e24-4a0c-8655-4b86f361f258">
+      <ID>Heart_Disease_Female</ID>
+      <Name>Heart_Disease_Female</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Microsoft.AnalysisServices.MiningModel</Name>
+          <Value>
+            <Microsoft.AnalysisServices.MiningModel xmlns="">
+              <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;MiningModelFilter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Items&gt;
+    &lt;FilterGridItem&gt;
+      &lt;IsGroup&gt;false&lt;/IsGroup&gt;
+      &lt;IsDataTable&gt;false&lt;/IsDataTable&gt;
+      &lt;Operator&gt;=&lt;/Operator&gt;
+      &lt;ColumnName&gt;Sex&lt;/ColumnName&gt;
+      &lt;ColumnID&gt;Sex&lt;/ColumnID&gt;
+      &lt;Value&gt;Female&lt;/Value&gt;
+      &lt;AndOr&gt;None&lt;/AndOr&gt;
+      &lt;ChildItems /&gt;
+    &lt;/FilterGridItem&gt;
+    &lt;FilterGridItem&gt;
+      &lt;IsGroup&gt;false&lt;/IsGroup&gt;
+      &lt;IsDataTable&gt;false&lt;/IsDataTable&gt;
+      &lt;ColumnName /&gt;
+      &lt;AndOr&gt;AND&lt;/AndOr&gt;
+      &lt;ChildItems /&gt;
+    &lt;/FilterGridItem&gt;
+  &lt;/Items&gt;
+&lt;/MiningModelFilter&gt;</Filter>
+            </Microsoft.AnalysisServices.MiningModel>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="b1d8f425-6603-4991-89dc-17891751f76c">
+          <ID>Age Category</ID>
+          <Name>Age Category</Name>
+          <SourceColumnID>Age Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9581e733-2248-4237-9261-f46a37c9bf23">
+          <ID>Alcohol Drinkers</ID>
+          <Name>Alcohol Drinkers</Name>
+          <SourceColumnID>Alcohol Drinkers</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="248e4b5e-874b-4ebe-90ab-d4d432cdc6e7">
+          <ID>Blind Or Vision Difficulty</ID>
+          <Name>Blind Or Vision Difficulty</Name>
+          <SourceColumnID>Blind Or Vision Difficulty</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c8eb72c6-54e4-404a-9016-0f6c6522ef7e">
+          <ID>Chest Scan</ID>
+          <Name>Chest Scan</Name>
+          <SourceColumnID>Chest Scan</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c69654bf-695e-43f2-9ff2-7853f6187cd6">
+          <ID>Covid Pos</ID>
+          <Name>Covid Pos</Name>
+          <SourceColumnID>Covid Pos</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3a92df55-c6a2-4c87-80c1-24d0446eacd0">
+          <ID>Deaf Or Hard Of Hearing</ID>
+          <Name>Deaf Or Hard Of Hearing</Name>
+          <SourceColumnID>Deaf Or Hard Of Hearing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="33f756e7-751a-45ba-af51-d4146461f31c">
+          <ID>Difficulty Concentrating</ID>
+          <Name>Difficulty Concentrating</Name>
+          <SourceColumnID>Difficulty Concentrating</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5cdf4be6-fd0c-474c-893c-4a635f91a896">
+          <ID>Difficulty Dressing Bathing</ID>
+          <Name>Difficulty Dressing Bathing</Name>
+          <SourceColumnID>Difficulty Dressing Bathing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="69079ee3-e36b-478c-821c-37fc745b5806">
+          <ID>Difficulty Errands</ID>
+          <Name>Difficulty Errands</Name>
+          <SourceColumnID>Difficulty Errands</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6c63074c-9d5d-4459-9dd6-f4501aec6a96">
+          <ID>Difficulty Walking</ID>
+          <Name>Difficulty Walking</Name>
+          <SourceColumnID>Difficulty Walking</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="40cffbe4-d164-47ea-b018-3e191cedbc6b">
+          <ID>E Cigarette Usage</ID>
+          <Name>E Cigarette Usage</Name>
+          <SourceColumnID>E Cigarette Usage</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="438fb4c6-76a4-4e10-bfb5-20438a63dfb1">
+          <ID>Flu Vax Last12</ID>
+          <Name>Flu Vax Last12</Name>
+          <SourceColumnID>Flu Vax Last12</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6229d4e8-d6c2-4934-9089-365e9c0e7f51">
+          <ID>General Health</ID>
+          <Name>General Health</Name>
+          <SourceColumnID>General Health</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ee08bc2e-8fe7-4848-831f-69b48099ca0e">
+          <ID>Had Angina</ID>
+          <Name>Had Angina</Name>
+          <SourceColumnID>Had Angina</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4fd7e842-12ae-4dab-bdd9-85ec3fc9aa4e">
+          <ID>Had Arthritis</ID>
+          <Name>Had Arthritis</Name>
+          <SourceColumnID>Had Arthritis</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="dc7cac30-e1af-4a5f-a87e-4cc542f077d0">
+          <ID>Had Asthma</ID>
+          <Name>Had Asthma</Name>
+          <SourceColumnID>Had Asthma</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7b7b8b13-b803-4e22-a3fd-fe3dfe4b5189">
+          <ID>Had COPD</ID>
+          <Name>Had COPD</Name>
+          <SourceColumnID>Had COPD</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2f2d2a55-2079-4c36-aec1-d51ee105427e">
+          <ID>Had Depressive Disorder</ID>
+          <Name>Had Depressive Disorder</Name>
+          <SourceColumnID>Had Depressive Disorder</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b86f22c7-e84c-4557-a619-856264e30458">
+          <ID>Had Diabetes</ID>
+          <Name>Had Diabetes</Name>
+          <SourceColumnID>Had Diabetes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6334f65b-fe34-4d2e-bb62-b8a47475979d">
+          <ID>Had Heart Attack</ID>
+          <Name>Had Heart Attack</Name>
+          <SourceColumnID>Had Heart Attack</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="027c718d-bfd2-43c8-975d-a5f1cd30fd43">
+          <ID>Had Kidney Disease</ID>
+          <Name>Had Kidney Disease</Name>
+          <SourceColumnID>Had Kidney Disease</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2f367c3b-dc36-4f03-87d6-0918a113aaf2">
+          <ID>Had Skin Cancer</ID>
+          <Name>Had Skin Cancer</Name>
+          <SourceColumnID>Had Skin Cancer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5b87508e-f685-4d83-adce-09129245ff7f">
+          <ID>Had Stroke</ID>
+          <Name>Had Stroke</Name>
+          <SourceColumnID>Had Stroke</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="73c52113-0510-40be-ac6e-ce92556e55f5">
+          <ID>High Risk Last Year</ID>
+          <Name>High Risk Last Year</Name>
+          <SourceColumnID>High Risk Last Year</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b4e136f2-5900-4d81-9685-8121da27e9ca">
+          <ID>HIV Testing</ID>
+          <Name>HIV Testing</Name>
+          <SourceColumnID>HIV Testing</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="84dde046-95b3-43ea-a780-58473e12be57">
+          <ID>Last Checkup Time</ID>
+          <Name>Last Checkup Time</Name>
+          <SourceColumnID>Last Checkup Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="becac851-67fa-47fb-962c-97261a87bd60">
+          <ID>Mental Health Days</ID>
+          <Name>Mental Health Days</Name>
+          <SourceColumnID>Mental Health Days</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3d95e4d7-8bc1-4c6b-ac68-e430a97aaa46">
+          <ID>Patient ID</ID>
+          <Name>Patient ID</Name>
+          <SourceColumnID>Patient ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="882e39b5-23f0-453a-bf33-853756b8dc42">
+          <ID>Physical Activities</ID>
+          <Name>Physical Activities</Name>
+          <SourceColumnID>Physical Activities</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f81810bc-e0e9-469e-b4e7-13ce07934957">
+          <ID>Pneumo Vax Ever</ID>
+          <Name>Pneumo Vax Ever</Name>
+          <SourceColumnID>Pneumo Vax Ever</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="babcf90f-4b53-436d-85da-45a79d3a4a55">
+          <ID>Race Ethnicity Category</ID>
+          <Name>Race Ethnicity Category</Name>
+          <SourceColumnID>Race Ethnicity Category</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2236a884-7a32-4b5b-a4bf-2c2aa95f4a0a">
+          <ID>Removed Teeth</ID>
+          <Name>Removed Teeth</Name>
+          <SourceColumnID>Removed Teeth</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7521d0dd-416b-44da-ac45-46a3ca36350d">
+          <ID>Sex</ID>
+          <Name>Sex</Name>
+          <SourceColumnID>Sex</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e433d447-4ff1-49af-9118-2da2e2e9b7c5">
+          <ID>Smoker Status</ID>
+          <Name>Smoker Status</Name>
+          <SourceColumnID>Smoker Status</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6f18ded3-af4a-48cf-a2bd-c5c9a69efa4d">
+          <ID>State</ID>
+          <Name>State</Name>
+          <SourceColumnID>State</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fc0775ee-fdba-49cd-9080-925ae29bbfe2">
+          <ID>Tetanus Last10 Tdap</ID>
+          <Name>Tetanus Last10 Tdap</Name>
+          <SourceColumnID>Tetanus Last10 Tdap</SourceColumnID>
+        </Column>
+      </Columns>
+      <ddl100_100:Filter>[Sex] = 'Female'</ddl100_100:Filter>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRS_FurnitureStore", "SSRS_FurnitureStore\SSRS_FurnitureStore.rptproj", "{01F36349-2315-4E9F-9A28-5926B7BE6C3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.Debug|Default.ActiveCfg = Debug
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.Debug|Default.Build.0 = Debug
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.Debug|Default.Deploy.0 = Debug
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.DebugLocal|Default.Build.0 = DebugLocal
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.Release|Default.ActiveCfg = Release
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.Release|Default.Build.0 = Release
+		{01F36349-2315-4E9F-9A28-5926B7BE6C3F}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34A810BC-AD4F-4A57-A51C-E705EE318C21}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,153 @@
+
+--- cau 1
+select {[Measures].[Sales]} on COLUMNS,
+		{TOPSUM([Customer].[Customer ID].CHILDREN 
+		*[Customer].[Customer Name].CHILDREN, 1, 
+		[Measures].[Sales])} 
+		on ROWS
+from [FurnitureStoreCube]
+where [Date].[Order Year].&[2017];
+
+
+
+--- Cau 2
+Select {[Measures].[Quantity]} on COLUMNS,
+		{[Product].[Category].CHILDREN} on ROWS
+		from [FurnitureStoreCube];
+
+--- Cau 3
+select {[Measures].[Sales]} on COLUMNS,
+		{TOPSUM([Customer].[Customer Name].CHILDREN 
+				*[Customer].[Segment].CHILDREN, 1,
+				[Measures].[Number of Orders])
+		} on ROWS
+from [FurnitureStoreCube]
+where [Location].[State].[Minnesota];
+
+----- Cau 4
+select {[Measures].[Sales]} 
+		on COLUMNS,
+		{TOPSUM([Date].[Order Year].CHILDREN*
+		[Date].[Order Quarter].[4], 1, 
+		[Measures].[Sales])} 
+		on ROWS
+from [FurnitureStoreCube];
+
+
+--- cau5
+select {[Measures].[Fact Furniture Store Count],[Measures].[Sales]} 
+on COLUMNS,
+{DrillDownLevel(
+	DrillDownLevel(
+		DrillDownLevel([Date].[O_Y_Q_M_D])))} on ROWS
+from [FurnitureStoreCube];
+
+--- cau6
+select {[Measures].[PhamTramLoiNhuan]} on COLUMNS,
+		{FILTER([Location].[City].MEMBERS,
+		 [Measures].[PhamTramLoiNhuan] > 0.30)} on ROWS
+from [FurnitureStoreCube];
+
+--- cau7
+select {[Measures].[PhamTramLoiNhuan]} on COLUMNS,
+		{Generate(
+			[Location].[State].MEMBERS,
+				TOPCOUNT([Location].[State].CURRENTMEMBER
+				*[Product].[Product Name].MEMBERS,3, 
+		[Measures].[PhamTramLoiNhuan]))} on ROWS
+from [FurnitureStoreCube];
+
+--- cau 8
+select {[Measures].[SoTienChietKhau]} on COLUMNS,
+		{FILTER(
+        [Location].[Region].[Region].MEMBERS,
+        [Location].[Country].CURRENTMEMBER.NAME = "United States"
+		)} on ROWS  
+from [FurnitureStoreCube]
+where [Product].[Category].&[Bookcases];
+
+---- cau 9
+select {[Measures].[Number of Orders]} on COLUMNS,
+       {Generate([Customer].[Segment].[Segment].MEMBERS, 
+	   [Customer].[Segment].CURRENTMEMBER * 
+	   [Ship Mode].[Ship Mode].[Ship Mode].MEMBERS)} on ROWS
+from [FurnitureStoreCube];
+
+--- câu 10
+SELECT {[Measures].[Sales]} ON COLUMNS,
+NON EMPTY
+    Head(
+        Order(
+            [Customer].[Customer Name].[Customer Name].MEMBERS,
+            [Measures].[Sales],
+            DESC
+        ),
+        10
+    )
+    ON ROWS
+FROM [FurnitureStoreCube]
+WHERE ({
+    [Product].[Category].[Chairs],
+    [Product].[Category].[Tables]
+});
+
+
+--- cau 11
+select {[Measures].[Sales], [Measures].[Profit]} on COLUMNS,
+		{[Location].[Region].CHILDREN} on ROWS
+from [FurnitureStoreCube];
+
+---- cau 12
+SELECT 
+    {[Measures].[Sales]} ON COLUMNS,
+    CROSSJOIN(
+        TOPPERCENT(
+            [Product].[Product Name].CHILDREN, 
+            20, 
+            [Measures].[Sales]
+        ),
+        [Ship Mode].[Ship Mode].MEMBERS
+    ) ON ROWS
+FROM [FurnitureStoreCube];
+--- cau 13
+select [Measures].[Quantity] on COLUMNS,
+	{FILTER([Product].[Product ID].CHILDREN*[Product].[Product Name].CHILDREN, 
+	[Measures].[Quantity]>=50 and [Measures].[Quantity]<=100)} on ROWS
+from [FurnitureStoreCube];
+---- cau 14
+SELECT 
+    {[Measures].[Sales]} ON COLUMNS,
+        TOPPERCENT(
+            [Product].[Product Name].CHILDREN, 
+            20, 
+            [Measures].[Sales]
+        ) 
+     ON ROWS
+FROM [FurnitureStoreCube];
+
+---- cau 15
+select {[Measures].[Profit],[Measures].[PhamTramLoiNhuan]} on COLUMNS,
+		{
+		UNION(
+			BottomCount(
+				FILTER(
+					[Customer].[Customer Name].MEMBERS,
+					([Ship Mode].[Ship Mode].&[First Class])),10,[Measures].[Number of Orders]),
+			BottomCount(
+				FILTER(
+					[Customer].[Customer Name].MEMBERS,
+					([Ship Mode].[Ship Mode].&[Standard Class])),10,[Measures].[Number of Orders]
+    )
+		)} on ROWS
+FROM [FurnitureStoreCube];
+
+
+
+
+
+
+
+
+
+
+

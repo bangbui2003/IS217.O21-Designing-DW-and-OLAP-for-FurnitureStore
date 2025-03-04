@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSAS_FurnitureStoreOLAP</Database>
+    <Server>VONGOCLEXUAN\MSSQLSERVER2022</Server>
+    <ConnectionString>Data Source=VONGOCLEXUAN\MSSQLSERVER2022;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>NdmuwdqLmYUZQ0RTQNMfCSXRJIU=21-Apr-24 2:54:50 AM21-Apr-24 2:54:50 AM</TimeStamp>
+        <ID>
+          <String>FURNITURE STORE DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>L5WAj8qSEHB1QDVZ1QQQyxyJUSM=21-Apr-24 2:55:17 AM21-Apr-24 2:55:16 AM</TimeStamp>
+        <ID>
+          <String>FURNITURE STORE DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>x5jPpUAiQ1WMTD6P9EtPXDdij5k=21-Apr-24 3:06:26 AM21-Apr-24 2:56:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>WOpyayBlkdzMjAh2koQK9SVRRGI=21-Apr-24 3:06:26 AM21-Apr-24 2:56:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Ship Mode</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>duyAFaO0re803JjmgqKi2GutrsU=21-Apr-24 3:06:26 AM21-Apr-24 2:56:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>50ofjC4j4V3ExZOAzUuso7abjH0=21-Apr-24 3:06:26 AM21-Apr-24 2:56:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>9KyEVk0+fmN868kXBVnaXrg57iw=21-Apr-24 3:06:26 AM21-Apr-24 2:56:09 AM</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>trPhD6rRfxiYD4EVMN5pQKz6ZrA=21-Apr-24 3:06:26 AM21-Apr-24 2:56:09 AMeCyk5ubE5HhUNuTglL0Ns8JJinU=21-Apr-24 2:56:09 AM21-Apr-24 2:56:09 AM</TimeStamp>
+        <ID>
+          <String>FURNITURE STORE DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>ZEHS+kiL7bQdPVpSXbKBGVGyY3Q=21-Apr-24 2:53:45 AM21-Apr-24 2:53:45 AM</TimeStamp>
+      <ID>
+        <String>SSAS_FurnitureStoreOLAP</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-04-20T20:06:28.846667Z</LastDeployed>
+</DeploymentSnapshot>
